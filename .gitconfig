@@ -1,0 +1,30 @@
+[user]
+	name = georgioslymperis
+	email = 
+
+[alias]
+	c = commit -am
+	fpush = push --force
+	s = status
+	sclone = clone --depth=1
+	amend = commit --amend --all
+	hreset = reset --hard
+	co = checkout
+	df = diff --color --color-words --abbrev
+    worddiff = !git diff --color | diff-highlight | less -r
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+
+	# Show the diff between the latest commit and the current state
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+
+	reup = rebase-update # depot_tools specific
+
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
+
+[pager]
+	# insanely beautiful diffs ==> npm install -g diff-so-fancy
+	diff = diff-so-fancy | less --tabs=4 -RFX
+	show = diff-so-fancy | less --tabs=4 -RFX
