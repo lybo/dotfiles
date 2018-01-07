@@ -1,14 +1,12 @@
+" pathogen
 execute pathogen#infect()
-call pathogen#helptags()
 syntax on
 filetype plugin indent on
-set mouse=a
 
-" tmux issue
-" if $TMUX == ''
-"     set clipboard+=unnamed
-" endif
+" clipboard
 set clipboard=unnamed
+
+set mouse=a
 
 " Make vim more useful
 set nocompatible
@@ -34,6 +32,8 @@ set number
 " Set no swap files
 set noswapfile
 
+set clipboard=unnamed
+
 " Give a shortcut key to NERD Tree
 nmap <silent> <C-Z> :NERDTreeToggle<CR>
 
@@ -47,14 +47,12 @@ let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases.javascript = 'html,javascript'
 
-
-" let g:acp_enableAtStartup = 0
-
-let g:ctrlp_custom_ignore = 'build\|node_modules\|DS_Store\|git\|temp'
-
+" youComplete
+let g:ycm_seed_identifiers_with_syntax = 1
 
 " ctrlp settings
-let g:ctrlp_user_command = 'find %s -type f | grep -v "`cat ~/.ctrlpignore`"'
+" let g:acp_enableAtStartup = 0
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|temp'
 
 " Default mapping
 let g:multi_cursor_next_key='<C-n>'
@@ -65,11 +63,7 @@ let g:multi_cursor_quit_key='<Esc>'
 " VIM-JSX
 let g:jsx_ext_required = 0
 
-" tmux
-" set ttimeoutlen=0
-
-" camelcasemotion
-call camelcasemotion#CreateMotionMappings('<leader>')
+" CamelCaseMotion
 map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b
 map <silent> e <Plug>CamelCaseMotion_e

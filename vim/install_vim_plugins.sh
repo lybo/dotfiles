@@ -1,6 +1,6 @@
 ## declare an array variable
 declare -a arr=(
-    "https://github.com/rking/ag.vim"
+    "git clone https://github.com/mileszs/ack.vim"
     "https://github.com/bkad/camelcasemotion"
     "https://github.com/kien/ctrlp.vim"
     "https://github.com/cohama/lexima.vim"
