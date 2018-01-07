@@ -1,0 +1,14 @@
+windows:
+  - name: services
+    root: ~/Documents/projects/dixme
+    layout: even-vertical
+    panes:
+      - npm start
+      - clear
+  - name: vim
+    root: ~/Documents/projects/dixme
+    layout: even-vertical
+    panes:
+      - commands:
+          - vim
+        focus: true
