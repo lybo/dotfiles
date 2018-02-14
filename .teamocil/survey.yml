@@ -1,0 +1,20 @@
+windows:
+  - name: services
+    root: ~/Documents/projects/djakne/survey
+    layout: tiled
+    panes:
+      - commands:
+          - cd server
+          - yarn dev
+      - commands:
+          - prisma local start
+      - git status
+      - clear
+  - name: vim
+    root: ~/Documents/projects/djakne/survey
+    layout: main-vertical
+    panes:
+      - commands:
+          - vim
+        focus: true
+      - yarn dev

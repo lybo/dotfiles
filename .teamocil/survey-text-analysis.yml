@@ -1,0 +1,17 @@
+windows:
+  - name: services
+    root: ~/Documents/projects/djakne/survey-text-analysis
+    layout: even-vertical
+    panes:
+      - commands:
+          - cd openNLP/target
+          - java -jar textAnalyser-1.0-SNAPSHOT.jar --server.port=8090
+      - clear
+  - name: vim
+    root: ~/Documents/projects/djakne/survey-text-analysis
+    layout: even-horizontal
+    panes:
+      - commands:
+          - vim
+        focus: true
+      - node --inspect app.js openNLP http://localhost:8090
