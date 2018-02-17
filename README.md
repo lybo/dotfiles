@@ -1,17 +1,31 @@
-https://github.com/paulirish/dotfiles/tree/master
-https://github.com/remiprev/teamocil
-https://vimawesome.com/plugin/youcompleteme#mac-os-x
+# oh-my-zsh
+https://github.com/robbyrussell/oh-my-zsh
 
-vim ~/.zshrc
-# teamocil autocompletion
-compctl -g '~/.teamocil/*(:t:r)' teamocil
+# node
+aftre install node
+brew install yarn
 
 
+# setup vim and tmux
+* `brew install vim`
+* https://github.com/tpope/vim-pathogen
+`
+cp install_vim_plugins.sh ~/.vim/bundle/install.sh
 cp .vimrc ~/.vimrc
 cp -r colors ~/.vim
 cp -r .teamocil ~/
 cp .tmux.conf ~/
+`
 
+https://github.com/remiprev/teamocil
+https://vimawesome.com/plugin/youcompleteme#mac-os-x
+brew install ack
 
-aftre install node
-brew install yarn
+vim ~/.zshrc
+`
+ZSH_THEME="af-magic"
+`
+`
+# teamocil autocompletion
+compctl -g '~/.teamocil/*(:t:r)' teamocil
+`
