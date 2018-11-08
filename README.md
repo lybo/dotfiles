@@ -2,11 +2,13 @@
 https://github.com/robbyrussell/oh-my-zsh
 
 # node
-aftre install node
+https://nodejs.org/en/
+after install node
 brew install yarn
 
 
 # setup vim and tmux
+* https://brew.sh/
 * `brew install vim`
 * https://github.com/tpope/vim-pathogen
 `
@@ -23,8 +25,13 @@ brew install ack
 
 vim ~/.zshrc
 `
-ZSH_THEME="af-magic"
+ZSH_THEME="intheloop"
+
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/lib/node_modules:$PATH
+export PATH=$HOME/.npm-packages/bin:$PATH
 `
+
 `
 # teamocil autocompletion
 compctl -g '~/.teamocil/*(:t:r)' teamocil
