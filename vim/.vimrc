@@ -8,6 +8,9 @@ set clipboard=unnamed
 
 set mouse=a
 
+set ruler
+
+
 " Make vim more useful
 set nocompatible
 
@@ -22,8 +25,8 @@ set backspace=indent,eol,start
 
 " Set indentation
 set smartindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 
 " Set line numbers
@@ -32,7 +35,13 @@ set number
 " Set no swap files
 set noswapfile
 
-set clipboard=unnamed
+" copy file's path to clipboard
+" relative path  (src/foo.txt)
+nnoremap <leader>cf :let @*=expand("%")<CR>
+" absolute path  (/something/src/foo.txt)
+nnoremap <leader>cF :let @*=expand("%:p")<CR>
+" display at the footer the file's path
+set statusline+=%F
 
 " Give a shortcut key to NERD Tree
 nmap <silent> <C-Z> :NERDTreeToggle<CR>
@@ -73,6 +82,29 @@ sunmap b
 sunmap e
 sunmap ge
 
+
+" CSCOPE
+cs add $CSCOPE_DB
+nnoremap <leader>fa :call CscopeFindInteractive(expand('<cword>'))<CR>
+nnoremap <leader>l :call ToggleLocationList()<CR>
+" s: Find this C symbol
+nnoremap  <leader>fs :call CscopeFind('s', expand('<cword>'))<CR>
+" g: Find this definition
+nnoremap  <leader>fg :call CscopeFind('g', expand('<cword>'))<CR>
+" d: Find functions called by this function
+nnoremap  <leader>fd :call CscopeFind('d', expand('<cword>'))<CR>
+" c: Find functions calling this function
+nnoremap  <leader>fc :call CscopeFind('c', expand('<cword>'))<CR>
+" t: Find this text string
+nnoremap  <leader>ft :call CscopeFind('t', expand('<cword>'))<CR>
+" e: Find this egrep pattern
+nnoremap  <leader>fe :call CscopeFind('e', expand('<cword>'))<CR>
+" f: Find this file
+nnoremap  <leader>ff :call CscopeFind('f', expand('<cword>'))<CR>
+" i: Find files #including this file
+nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
+
+
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -87,3 +119,9 @@ let g:syntastic_javascript_eslint_exe = 'yarn lint --'
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <C-w>E :SyntasticToggleMode<CR>
 nnoremap <C-w>R :SyntasticCheck<CR>
+
+" let g:syntastic_error_symbol = '❌'
+" let g:syntastic_style_error_symbol = '⁉️'
+" let g:syntastic_warning_symbol = '⚠️'
+" let g:syntastic_style_warning_symbol = '💩'
+
