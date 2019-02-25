@@ -23,6 +23,7 @@ declare -a arr=(
     "https://github.com/jparise/vim-graphql"
     "https://github.com/vim-syntastic/syntastic"
     "https://github.com/tpope/vim-surround"
+    "https://github.com/vim-scripts/matchit.zip"
 )
 ## now loop through the above array
 for repo in "${arr[@]}"
