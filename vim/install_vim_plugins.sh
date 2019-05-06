@@ -19,7 +19,7 @@ declare -a arr=(
     "https://github.com/honza/vim-snippets.git"
     "https://github.com/duff/vim-trailing-whitespace"
     "https://github.com/posva/vim-vue"
-    "https://github.com/valloric/youcompleteme"
+    "https://github.com/ajh17/vimcompletesme"
     "https://github.com/jparise/vim-graphql"
     "https://github.com/vim-syntastic/syntastic"
     "https://github.com/tpope/vim-surround"
