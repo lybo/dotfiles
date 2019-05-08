@@ -1,0 +1,27 @@
+windows:
+  - name: paths
+    root: ~/Documents/projects/djakne/united-robots
+    layout: even-horizontal
+    panes:
+      - commands:
+        - cd ./
+      - commands:
+        - psql -d unitedrobots -U unitedrobots
+  - name: services
+    root: ~/Documents/projects/djakne/united-robots
+    layout: even-horizontal
+    panes:
+      - commands:
+        - cd backend
+        - node --debug-brk --inspect node_modules/serverless/bin/serverless offline
+    - commands:
+        - cd frontend
+        - yarn start
+  - name: vim
+    root: ~/Documents/projects/djakne/united-robots
+    layout: even-horizontal
+    panes:
+      - commands:
+        - vim
+        focus: true
+
