@@ -81,6 +81,9 @@ sunmap b
 sunmap e
 sunmap ge
 
+" VimCompletesMe
+autocmd BufEnter * silent! lcd %:p:h
+
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -96,6 +99,7 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_
 nnoremap <C-w>E :SyntasticToggleMode<CR>
 nnoremap <C-w>R :SyntasticCheck<CR>
 
+
 " let g:syntastic_error_symbol = '❌'
 " let g:syntastic_style_error_symbol = '⁉️'
 " let g:syntastic_warning_symbol = '⚠️'
@@ -104,3 +108,8 @@ nnoremap <C-w>R :SyntasticCheck<CR>
 " Custom
 " map ObjectToCss :CamelToHyphen <bar> :s/'//g <bar> :s/,/;/g
 " map ObjectToCss :execute CamelToHyphen | s/'//g | s/,/;/g
+
+" vim-node
+" ^w + gf => new tab
+
+
