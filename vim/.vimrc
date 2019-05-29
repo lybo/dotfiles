@@ -83,7 +83,8 @@ sunmap ge
 
 " VimCompletesMe
 autocmd FileType vim let b:vcm_tab_complete = 'vim'
-autocmd BufEnter * silent! lcd %:p:h
+set autochdir
+" autocmd BufEnter * silent! lcd %:p:h
 
 "ctags
 set tags=tags;/
