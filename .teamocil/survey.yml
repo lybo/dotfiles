@@ -4,18 +4,35 @@ windows:
     layout: tiled
     panes:
       - commands:
-          - cd server
-          - yarn dev
+        - cd ./
       - commands:
-          - cd server
-          - docker ps
-      - git status
-      - clear
+        - cd server
+      - commands:
+        - cd server
+      - commands:
+        - ~/Documents/projects/djakne/text-analyser/target
+        - java -jar text-analyser-1.0-SNAPSHOT.jar --server.port=8090
+  - name: servicesServer
+    root: ~/Documents/projects/djakne/survey
+    layout: tiled
+    panes:
+      - commands:
+        - cd server
+        - GRAPHQL_AUTH=false yarn dev:debug
+      - commands:
+        - cd server
+        - yarn dev:survey
+      - commands:
+        - cd server
+      - commands:
+        - cd server
+        - yarn playground
   - name: vim
     root: ~/Documents/projects/djakne/survey
     layout: main-vertical
     panes:
       - commands:
-          - vim
+        - vim
         focus: true
-      - yarn dev
+      - commands:
+        - APPS=manager,survey,widget yarn dev

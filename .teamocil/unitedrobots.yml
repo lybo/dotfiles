@@ -1,35 +1,47 @@
 windows:
   - name: paths
-    root: ~/Documents/projects/djakne/united-robots
+    root: ~/projects/djakne/united-robots
     layout: even-horizontal
     panes:
       - commands:
+        - nvm use 16
         - cd ./
       - commands:
-        - psql -d unitedrobots -U unitedrobots
+        - nvm use 16
+        - cd backend
   - name: services
-    root: ~/Documents/projects/djakne/united-robots
+    root: ~/projects/djakne/united-robots
     layout: even-horizontal
     panes:
       - commands:
+        - nvm use 16
         - cd backend
-        - node --debug-brk --inspect node_modules/serverless/bin/serverless offline
+        - brew services stop postgresql
+        - docker-compose up
+      - commands:
+        - nvm use 16
+        - cd backend
+        - sleep 5
+        - yarn offline-debug
       - commands:
         - cd frontend
         - yarn start
-  - name: vim
-    root: ~/Documents/projects/djakne/united-robots
+  - name: vim-2
+    root: ~/projects/djakne/united-robots
     layout: even-horizontal
     panes:
       - commands:
+        - nvm use 16
         - vim
         focus: true
   - name: offline-s3
-    root: /var/folders/_k/zl5h6xyn5xv_1k4vl3gb2sjh0000gn/T/offline-s3/united-robots-processing-local/writer/data/cache/weather
+    root: /
     layout: even-horizontal
     panes:
       - commands:
-        - ls
+        - nvm use 16
+        - cd /var/folders/_k/zl5h6xyn5xv_1k4vl3gb2sjh0000gn/T/offline-s3/united-robots-processing-local/
       - commands:
-        - cd /var/folders/_k/zl5h6xyn5xv_1k4vl3gb2sjh0000gn/T/offline-s3/united-robots-processing-local/mock-slack
+        - nvm use 16
+        - cd /var/folders/_k/zl5h6xyn5xv_1k4vl3gb2sjh0000gn/T/offline-s3/united-robots-processing-local/
 
