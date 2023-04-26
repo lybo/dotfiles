@@ -1,0 +1,46 @@
+windows:
+  - name: paths
+    root: ~/projects/enimero
+    layout: even-horizontal
+    panes:
+      - commands:
+        - nvm use 18
+        - cd backend
+      - commands:
+        - nvm use 18
+        - cd frontend-web
+        # - cd backend
+  - name: services
+    root: ~/projects/enimero
+    layout: even-horizontal
+    panes:
+      - commands:
+        - nvm use 18
+        - cd backend/supabase
+        - supabase start
+        # - supabase functions serve actions
+      - commands:
+        - nvm use 18
+        - cd backend/sls-server
+        - yarn offline
+      - commands:
+        - nvm use 18
+        - cd frontend-web
+        - yarn dev
+  - name: vim-2
+    root: ~/projects/enimero
+    layout: even-horizontal
+    panes:
+      - commands:
+        - vim
+        focus: true
+  # - name: offline-s3
+  #   root: /
+  #   layout: even-horizontal
+  #   panes:
+  #     - commands:
+  #       - nvm use 18
+  #       # - cd /var/folders/_k/zl5h6xyn5xv_1k4vl3gb2sjh0000gn/T/offline-s3/united-robots-processing-local/
+  #     - commands:
+  #       - nvm use 18
+  #       # - cd /var/folders/_k/zl5h6xyn5xv_1k4vl3gb2sjh0000gn/T/offline-s3/united-robots-processing-local/

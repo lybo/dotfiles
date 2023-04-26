@@ -1,0 +1,36 @@
+windows:
+  - name: paths
+    root: ~/projects/djakne/everysport-tv-expressen-se
+    layout: even-horizontal
+    panes:
+      - commands:
+        - nvm use 18
+      - commands:
+        - nvm use 18
+        # - cd backend
+  - name: services
+    root: ~/projects/djakne/everysport-tv-expressen-se
+    layout: even-horizontal
+    panes:
+      - commands:
+        - nvm use 18
+        - yarn start
+      - commands:
+        - nvm use 18
+  - name: vim-2
+    root: ~/projects/djakne/everysport-tv-expressen-se
+    layout: even-horizontal
+    panes:
+      - commands:
+        - vim
+        focus: true
+  # - name: offline-s3
+  #   root: /
+  #   layout: even-horizontal
+  #   panes:
+  #     - commands:
+  #       - nvm use 16
+  #       # - cd /var/folders/_k/zl5h6xyn5xv_1k4vl3gb2sjh0000gn/T/offline-s3/united-robots-processing-local/
+  #     - commands:
+  #       - nvm use 16
+  #       # - cd /var/folders/_k/zl5h6xyn5xv_1k4vl3gb2sjh0000gn/T/offline-s3/united-robots-processing-local/

@@ -1,0 +1,35 @@
+windows:
+  - name: paths
+    root: ~/Documents/projects/djakne/studybee
+    layout: even-horizontal
+    panes:
+      - commands:
+        - cd ./studybee-frontend-admin
+      - commands:
+        - cd ./
+  - name: services
+    root: ~/Documents/projects/djakne/studybee
+    layout: tiled
+    panes:
+      - commands:
+        - cd ./studybee-backend
+        - brew services stop postgresql
+        - sleep 5
+        - docker-compose up
+      - commands:
+        - cd ./studybee-frontend
+        - yarn start:dev
+      - commands:
+        - cd ./studybee-frontend-admin
+        - yarn start
+      - commands:
+        - cd ./studybee-backend-node
+        - sleep 10
+        -  nodemon --inspect index.js
+  - name: vim-2
+    root: ~/Documents/projects/djakne/studybee
+    layout: even-horizontal
+    panes:
+      - commands:
+        - vim
+        focus: true

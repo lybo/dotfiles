@@ -1,0 +1,40 @@
+windows:
+  - name: paths
+    root: ~/projects/djakne/nordic-style-coffee-website
+    layout: even-horizontal
+    panes:
+      - commands:
+        - nvm use 16
+        - cd ./frontend
+      - commands:
+        - nvm use 16
+        - cd backend/lambda
+      - commands:
+        - nvm use 16
+        - cd backend/sanity
+  - name: services
+    root: ~/projects/djakne/nordic-style-coffee-website
+    layout: even-horizontal
+    panes:
+      # - commands:
+      #   - nvm use 16
+      #   - cd backend
+      - commands:
+        - nvm use 16
+        - cd backend/lambda
+        - yarn start
+      - commands:
+        - nvm use 16
+        - cd backend/sanity
+        - yarn start
+      - commands:
+        - nvm use 16
+        - cd frontend
+        - yarn dev
+  - name: vim-2
+    root: ~/projects/djakne/nordic-style-coffee-website
+    layout: even-horizontal
+    panes:
+      - commands:
+        - vim
+        focus: true

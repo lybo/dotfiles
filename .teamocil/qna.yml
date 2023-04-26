@@ -1,0 +1,42 @@
+windows:
+  - name: paths
+    root: ~/Documents/projects/djakne/ur-qna
+    layout: even-horizontal
+    panes:
+      - commands:
+        - cd .
+      - commands:
+        - cd backend
+        - brew services stop postgresql
+        - sleep 5
+        - docker-compose up -d
+  - name: services
+    root: ~/Documents/projects/djakne/ur-qna
+    layout: even-horizontal
+    panes:
+      - commands:
+        - cd backend
+        - sleep 10
+        - sls offline --port=3007
+      - commands:
+        - cd qna-client
+        - yarn start
+  - name: vim
+    root: ~/Documents/projects/djakne/ur-qna
+    layout: even-horizontal
+    panes:
+      - commands:
+        - vim
+        focus: true
+  - name: services-2
+    root: ~/Documents/projects/djakne/ur-qna
+    layout: even-horizontal
+    panes:
+      - commands:
+        - cd serverless-qna-frontend
+      - commands:
+        - cd serverless-qna-frontend
+        - sleep 5
+        - yarn start --skipCacheInvalidation
+
+
